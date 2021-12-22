@@ -35,3 +35,5 @@ Then add this line
 ```Bash
 * * * * * python3 /home/pi/bitcoin-ticker/bitcoin-ticker.py
 ```
+
+[![thelooks.jpg](https://i.postimg.cc/MHdPKh8M/thelooks.jpg)](https://postimg.cc/8ffBZXcN)
