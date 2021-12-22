@@ -1,5 +1,5 @@
 # bitcoin-ticker
-Simple bitcoin ticker for the Pimorono InkyPhat Red.
+Simple bitcoin ticker for the Pimorono Inky pHAT Red.
 
 ## Equipment
 * Raspberry Pi Zero W v1.1 or Pi 2 model b v1.1
