@@ -26,6 +26,6 @@ w, h = fontSmall.getsize(price)
 x = 60
 y = 65
 
-draw.text((x, y), price, inky_display.RED, fontSmall)
+draw.text((x, y), price, inky_display.BLACK, fontSmall)
 inky_display.set_image(img)
 inky_display.show()
