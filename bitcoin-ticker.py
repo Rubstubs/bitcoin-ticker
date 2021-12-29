@@ -19,7 +19,7 @@ priceFull = data["bpi"]["USD"]["rate"]
 price = priceFull.split('.')[0] + " $"
 
 # btc-text
-draw.text((10, 0), "BTC", inky_display.RED, fontLarge)
+draw.text((10, 0), "BTC", inky_display.BLACK, fontLarge)
 
 # price-text
 w, h = fontSmall.getsize(price)

@@ -27,13 +27,14 @@ sudo apt install git
 ```Bash
 git clone https://github.com/Rubstubs/bitcoin-ticker.git
 ```
-7. Add job to crontab (runs every minute with this setup)
+7. Open crontab
 ```Bash
 crontab -e
 ```
-Then add this line
+Add this line:
 ```Bash
-* * * * * python3 /home/pi/bitcoin-ticker/bitcoin-ticker.py
+*/2 * * * * python3 /home/pi/bitcoin-ticker/bitcoin-ticker.py
 ```
+Crontab will then run the script every second minute
 
 [![thelooks.jpg](https://i.postimg.cc/MHdPKh8M/thelooks.jpg)](https://postimg.cc/8ffBZXcN)
