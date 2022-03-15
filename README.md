@@ -40,7 +40,7 @@ crontab -e
 
 Add this line:
 ```n
-*/2 * * * * /home/pi/bitcoin-ticker/bitcoin-ticker.py
+*/5 * * * * /home/pi/bitcoin-ticker/bitcoin-ticker.py
 ```
 
 Crontab will then run the script every second minute
