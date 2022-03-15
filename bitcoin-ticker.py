@@ -19,14 +19,26 @@ data = response.json()
 priceFull = data["bpi"]["USD"]["rate"]
 price = priceFull.split('.')[0] + " $"
 
-# btc-text
-draw.text((10, 0), "BTC", inky_display.BLACK, fontLarge)
+# Note the constants - The third color whether red or yellow is the same
+# inky_display.WHITE = 0
+# inky_display.BLACK = 1
+# inky_display.RED = 2
+# inky_display.YELLOW = 2
+textcolor = 2
 
-# price-text
+# btc-text (left aligned on top 50%)
+coinsymbol = "BTC"
+w, h = fontLarge.getsize(coinsymbol)
+x = 5
+y = int(((inky_display.HEIGHT * .50)/2) - (h/2))
+draw.text((x, y), coinsymbol, textcolor, fontLarge)
+
+# price-text (right aligned on bottom 50%)
 w, h = fontSmall.getsize(price)
-x = 60
-y = 65
+x = inky_display.WIDTH - w - 5
+y = int(inky_display.HEIGHT - ((inky_display.HEIGHT * .50)/2) - (h/2))
+draw.text((x, y), price, textcolor, fontSmall)
 
-draw.text((x, y), price, inky_display.BLACK, fontSmall)
+# render
 inky_display.set_image(img)
 inky_display.show()
