@@ -7,34 +7,42 @@ Simple bitcoin ticker for the Pimorono Inky pHAT Red.
 
 ## Setup
 1. Install Raspbian Lite
+
 2. Update and upgrade 
-```Bash
+```sh
 sudo apt update && sudo apt upgrade -y
 ```
+
 3. Install Inky pHAT
-```Bash
+```sh
 curl https://get.pimoroni.com/inky | bash
 ```
-4. Install the font we're using
-```Bash
-pip install font-fredoka-one
+
+4. Install pip for package management and git
+```sh
+sudo apt-get install python3-pip python-dev git
 ```
-5. Install Git
-```Bash 
-sudo apt install git
+
+5. Install the font we're using
+```sh
+pip3 install font-fredoka-one
 ```
+
 6. Clone this repo
-```Bash
+```sh
 git clone https://github.com/Rubstubs/bitcoin-ticker.git
 ```
+
 7. Open crontab
-```Bash
+```sh
 crontab -e
 ```
+
 Add this line:
-```Bash
+```n
 */2 * * * * /home/pi/bitcoin-ticker/bitcoin-ticker.py
 ```
+
 Crontab will then run the script every second minute
 
 ### Addition notes
